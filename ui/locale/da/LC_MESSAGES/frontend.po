@@ -670,10 +670,9 @@ msgid "Action class %1$s must extend %2$s class."
 msgstr "Handlingsklassen %1$s skal udvide %2$s-klassen."
 
 #: app/controllers/CControllerActionDelete.php:79
-#, fuzzy
 msgid "Action deleted"
 msgid_plural "Actions deleted"
-msgstr[0] "Handlingen er slettet"
+msgstr[0] ""
 msgstr[1] "Handlingen er slettet"
 
 #: app/controllers/CControllerActionDisable.php:84
@@ -1930,7 +1929,7 @@ msgstr "Nederste N"
 
 #: jsLoader.php:241
 msgid "Bring forward"
-msgstr "Bring frem"
+msgstr "Flyt frem"
 
 #: jsLoader.php:240
 msgid "Bring to front"
@@ -2418,7 +2417,7 @@ msgstr "Kan ikke slette Zabbix intern bruger \"%1$s\", prøv at deaktivere den b
 msgid "Cannot delete action"
 msgid_plural "Cannot delete actions"
 msgstr[0] "Kan ikke slette handling"
-msgstr[1] ""
+msgstr[1] "Kan ikke slette handling"
 
 #: include/classes/api/services/CRole.php:368
 #, c-format
