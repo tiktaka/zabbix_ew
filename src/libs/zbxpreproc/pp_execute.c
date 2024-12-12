@@ -264,6 +264,7 @@ static int	pp_excute_jsonpath_query(zbx_pp_cache_t *cache, zbx_variant_t *value,
 	else
 	{
 		zbx_jsonobj_t	*obj;
+		int		ret;
 
 		if (NULL == (obj = (zbx_jsonobj_t *)cache->data))
 		{
@@ -283,8 +284,10 @@ static int	pp_excute_jsonpath_query(zbx_pp_cache_t *cache, zbx_variant_t *value,
 			cache->data = (void *)obj;
 		}
 
+		ret = zbx_jsonobj_query(obj, params, &data);
 		zbx_jsonobj_disable_indexing(obj);
-		if (FAIL == zbx_jsonobj_query(obj, params, &data))
+
+		if (FAIL == ret)
 		{
 			*errmsg = zbx_strdup(*errmsg, zbx_json_strerror());
 			return FAIL;
